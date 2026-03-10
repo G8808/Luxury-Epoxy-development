@@ -1,0 +1,34 @@
+body {
+    --heroHeight: 100vh;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}   
+.hero-container {
+  box-sizing: border-box;
+}
+.hero-video {
+ object-fit: fill;
+ width: 100%;
+ height: var(--heroHeight);
+ margin: 0 !important;
+}
+@media (max-width: 1000px) {
+    .hero-video {
+        object-fit: cover;
+    }
+}
+.hero-video-container {
+  position: relative;
+}
+section {
+ background-color: blue;
+ position: relative;
+ overflow: hidden;
+ height: var(--heroHeight);
+}
