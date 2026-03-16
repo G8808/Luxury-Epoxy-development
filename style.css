@@ -32,3 +32,50 @@ section {
  overflow: hidden;
  height: var(--heroHeight);
 }
+.titleimg {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);                                       
+  height: 450px;
+
+}
+
+.titletext {
+  position: absolute;
+  top: calc(50% + 140px);
+  left: 50%;
+  transform: translateX(-50%);
+ font-family: 'Orbitron', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.5rem, 8vw, 5.5rem);   /* responsive sizing */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      font-size: 48px;
+      color: white;
+      
+  /* Animation properties */
+  opacity: 0;
+  transform: translate(-50%, 120px);   /* start lower than final position */
+  animation: slideUpFade 2s ease-out forwards;
+}
+
+/* Define the animation */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 120px);   /* starts 120px lower */
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);       /* ends at the originally intended position */
+  }
+}
+
+.secondrow {
+  width: auto;
+  height: auto;
+  
+  background-color: red;
+}
