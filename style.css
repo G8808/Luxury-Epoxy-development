@@ -127,3 +127,21 @@ section {
 .nav-link:hover,
 .navbar-brand:hover {
   color: skyblue;
+}
+.section1 {
+  margin-top: 100px;
+  Background-color: rgb(15, 0, 97);
+  padding-left: 35px;
+}
+.subtitle {
+  font-family: 'Orbitron', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.5rem, 4vw, 3.5rem);   /* responsive sizing */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      font-size: 32px;
+      color: grey;
+      text-align: center;
+      margin-top: 10px;
+}
