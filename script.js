@@ -1,4 +1,4 @@
-const { createApp, ref } = Vue;
+const { createApp } = Vue;
 
 createApp({
   // Data / State
@@ -20,3 +20,4 @@ createApp({
     console.log("Vue is active and polished.");
   }
 }).mount('#app');
+

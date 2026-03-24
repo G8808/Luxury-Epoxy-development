@@ -5,6 +5,17 @@ body {
     --bg-main: rgb(0, 0, 110);
       --main-color: whitesmoke;
       background-color: black;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 .hero-overlay {
   position: absolute;
@@ -51,30 +62,50 @@ section {
   top: calc(50% + 140px);
   left: 50%;
   transform: translateX(-50%);
- font-family: 'Orbitron', sans-serif;
-      font-weight: 800;
-      font-size: clamp(2.5rem, 8vw, 5.5rem);   /* responsive sizing */
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      line-height: 1.1;
-      font-size: 48px;
-      color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  color: white;
+  white-space: nowrap;
+  padding: 0 20px;
+  max-width: 90vw;
+  overflow: visible;
       
   /* Animation properties */
   opacity: 0;
-  transform: translate(-50%, 120px);   /* start lower than final position */
   animation: slideUpFade 2s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .titletext {
+    font-size: clamp(1rem, 3.5vw, 2rem);
+  }
+  .about-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titletext {
+    font-size: clamp(0.8rem, 3vw, 1.5rem);
+  }
 }
 
 /* Define the animation */
 @keyframes slideUpFade {
   from {
     opacity: 0;
-    transform: translate(-50%, 120px);   /* starts 120px lower */
+    transform: translateX(-50%) translateY(120px);
   }
   to {
     opacity: 1;
-    transform: translate(-50%, 0);       /* ends at the originally intended position */
+    transform: translateX(-50%) translateY(0);
   }
 }
 
@@ -129,28 +160,65 @@ section {
 .navbar-brand:hover {
   color: skyblue;
 }
-.section1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.233)), url("ChatGPT\ Image\ Mar\ 23\,\ 2026\,\ 08_46_54\ AM.png");
-  background-size: cover;
+.section1,
+.section2,
+.secondrow {
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  height: auto;
-  padding-bottom: 100px;
-  padding-left: 30px;
-   padding-right: 30px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 60px 0 100px 0;
+  box-sizing: border-box;
 }
+
+.section1 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.233) 0%, rgba(0, 0, 0, 0.233) 70%, rgba(0, 0, 50, 0.5) 100%), url("ChatGPT\ Image\ Mar\ 23\,\ 2026\,\ 08_46_54\ AM.png");
+  background-size: cover;
+
+}
+
+.section2 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.233) 0%, rgba(218, 165, 32, 0.3) 40%, rgba(0, 0, 50, 0.5) 80%, rgba(0, 0, 50, 0.5) 100%), url("Electric\ blue\ nebula\ in\ deep\ space.png");
+  background-size: cover;
+  padding-bottom: 0;
+}
+
+.secondrow {
+  background-color: #0f172a;
+  background-size: cover;
+  
+}
+.section1 .row,
+.secondrow .row,
+.section2 .contact-section {
+  max-width: 1140px;
+  margin: 0 auto;
+
+  width: 100%;
+}
+
 .subtitle {
+  transform: translatey(-70px);
+  padding-top: 30px;
   font-family: 'Orbitron', sans-serif;
       font-weight: 800;
       font-size: clamp(1.5rem, 4vw, 3.5rem);   /* responsive sizing */
       text-transform: uppercase;
       letter-spacing: 1px;
       line-height: 1.1;
-      font-size: 32px;
       color: whitesmoke;
       text-align: center;
-      margin-top: 80px;
+      margin: 80px auto 0;
       padding-bottom: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
       
 }
 
@@ -158,15 +226,178 @@ section {
 .card-title {
   text-align: center;
 }
-.secondrow {
-   background-color: aqua;
-  background-size: cover;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  height: auto;
-  padding-bottom: 100px;
-    padding-left: 30px;
-   padding-right: 30px;
-   transform: translatey(-79px);
 
+.about-item {
+  margin-bottom: 40px;
 }
+.about-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .about-item {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .about-image {
+    margin-bottom: 15px;
+  }
+}
+
+/* Dimmed placeholder text */
+::placeholder {
+  color: #999;
+  opacity: 1;
+}
+.contact-section {
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      max-width: 100%;
+      margin: 0;
+      box-shadow: none;
+    }
+    .contact-section h2 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 600;
+      color: #f8fafc;
+      margin-bottom: 40px;
+      transform: translateY(-30px);
+    }
+
+    .form-container {
+      background: rgba(5, 7, 35, 0.94);
+      border-radius: 18px;
+      padding: 40px 36px;
+      box-shadow: 0 14px 50px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      width: calc(100% - 40px);
+      max-width: 1040px;
+      margin: 0 auto;
+      transform: translateY(-30px);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #4c1d95;
+      margin-bottom: 6px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid rgba(148, 163, 184, 0.65);
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      background: rgba(248, 250, 252, 0.96);
+      color: #0f172a;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #6366f1;
+      background: #ffffff;
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25);
+    }
+
+    select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 16px;
+      background: white;
+      color: #374151;
+      transition: all 0.2s ease;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+      background-position: right 12px center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      padding-right: 40px;
+    }
+
+    select:focus {
+      border-color: darkcyan;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #4338ca, #7c3aed);
+      color: white;
+      border: none;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 18px;
+      box-shadow: 0 10px 20px rgba(76, 29, 149, 0.35);
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(135deg, #3730a3, #6d28d9);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 24px rgba(76, 29, 149, 0.45);
+    }
+
+    .form-row-left {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .form-row-right {
+      height: 100%;
+    }
+
+    .form-group.full-height textarea {
+      min-height: 100%;
+      height: 288px;
+    }
+
+    @media (max-width: 992px) {
+      .form-container {
+        max-width: 100%;
+        padding: 28px 20px;
+      }
+      .form-group.full-height textarea {
+        height: 200px;
+      }
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #6b21a8;
+
+    }
+    .bottom {
+      background-color: #0f172a;
+      color: whitesmoke;
+      text-align: center;
+      padding: 20px 0;
+     
+      
+    }
