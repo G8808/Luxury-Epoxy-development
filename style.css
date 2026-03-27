@@ -394,10 +394,53 @@ section {
 
     }
     .bottom {
-      background-color: #0f172a;
+      background-color: #000000;
       color: whitesmoke;
       text-align: center;
       padding: 20px 0;
      
       
     }
+    .repair {
+      width: 100px;
+      height: auto;
+      display: block;
+    }
+    .resizedlogo {
+      width: 35px;
+      height: auto;
+    }
+
+    .selected {
+      color: skyblue;
+    }
+    .nav-class .nav-link:focus, 
+.nav-class .nav-link:active {
+    color: #fff !important;
+    outline: none;
+}
+.navbar-nav .nav-link.active {
+    color: #fff; /* or your brand color */
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden by default */
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #007bff; /* Match your primary blue */
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  transition: opacity 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #0056b3;
+}
