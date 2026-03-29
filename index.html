@@ -28,16 +28,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#">Home</a>
+            <a class="nav-link selected" aria-current="page"  href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" id="services-link" href="#">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
+            <a class="nav-link" id="about-link" href="#">About </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" id="contact-link" href="#">Contact</a>
           </li>
         </ul>
       </div>
@@ -77,29 +77,13 @@
 
   <main id="app" class="container-fluid mt-5 mb-0 ">
       <div class="row section1">
-    <h2 class="subtitle">Our Services</h2>
+    <h2 class="subtitle" id="services">Our Services</h2>
     
-      <div class="col-md-4">
+      <div class="col-md-4" v-for="service in services" :key="service.title">
       <div class="card">
         <div class="card-body">
-        <h5 class="card-title ">Garage Flooring</h5>
-        <p class="card-text">Transform your garage with our premium Epoxy flooring solutions and professional installation. Our durable coatings protect against stains, cracks, and heavy traffic, making it ideal for everyday use and vehicle storage. Experience a showroom-quality finish with a modern appearance that enhances your entire garage space. </p>
-        </div>
-      </div>
-      </div>
-      <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">
-        <h5 class="card-title">Basements</h5>
-        <p class="card-text">Enhance your basement with our durable and attractive epoxy flooring options built with premium quality materials. Create a moisture-resistant surface that transforms your space into a functional room perfect for recreation or storage. Our expert team ensures a perfect finish every time, with solutions designed to withstand humidity and temperature fluctuations.</p>
-        </div>
-      </div>
-      </div>
-      <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">
-        <h5 class="card-title">Countertops</h5>
-        <p class="card-text">Create stunning countertops with our custom epoxy solutions that are both beautiful and incredibly durable. Choose from premium finishes and unique designs that enhance any kitchen or bathroom design. Our countertops resist heat, stains, and scratches while providing lasting elegance and easy maintenance for years to come.</p>
+        <h5 class="card-title ">{{ service.title }}</h5>
+        <p class="card-text">{{ service.description }}</p>
         </div>
       </div>
       </div>
@@ -109,39 +93,25 @@
 
     <div class="secondrow">
       
-      <h2 class="subtitle">About us</h2>
+      <h2 class="subtitle" id="about">About us</h2>
 
-      <div class="row align-items-center about-item">
+      <div class="row align-items-center about-item" v-for="member in team" :key="member.name">
         <div class="col-md-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Person 1</h5>
-              <p class="card-text">Meet Person 1, our lead technician with over 10 years of experience in epoxy flooring installation.</p>
+              <h5 class="card-title">{{ member.name }}</h5>
+              <p class="card-text">{{ member.description }}</p>
             </div>
           </div>
         </div>
         <div class="col-md-6">
-          <img src="ChatGPT Image Mar 10, 2026, 11_48_12 AM.png" alt="Commercial Spaces" class="about-image" />
-        </div>
-      </div>
-
-      <div class="row align-items-center about-item">
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Person 2</h5>
-              <p class="card-text">Meet Person 2, our experienced installer with a passion for creating beautiful epoxy flooring solutions.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <img src="ChatGPT Image Mar 10, 2026, 11_48_12 AM.png" alt="Residential Spaces" class="about-image" />
+          <img :src="member.image" :alt="member.alt" class="about-image" />
         </div>
       </div>
 
     </div>
     <div class="section2">
-<h2 class="subtitle">Interested in our services? </h2>
+<h2 class="subtitle" id="contact">Interested in our services? </h2>
 <div class="contact-section">
     <h2>Contact us</h2>
     
@@ -192,15 +162,16 @@
       </div>
     </div>
 
-        <button type="submit" class="submit-btn">Submit</button>
-      </form>
+        </form>
+      </div>
     </div>
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4 bottom">
-    <p>&copy; 2026 Luxury Epoxy NJ. All rights reserved.</p>
+  <footer class="bg-dark text-white py-4 bottom d-flex justify-content-center align-items-center">
+    <p class="mb-0 me-3">&copy; 2026 Luxury Epoxy NJ. All rights reserved.</p> <a href="https://www.instagram.com/luxuryepoxynj_llc/"><img src="174855.png" alt="Logo" class="img-fluid resizedlogo"></a>
   </footer>
 
   <!-- Bootstrap JS Bundle (includes Popper) -->
