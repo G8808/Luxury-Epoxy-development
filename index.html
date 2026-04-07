@@ -18,7 +18,7 @@
 
 <body>
   <!-- Navigatio n -->
-  <nav class="navbar navbar-expand-lg navclass">
+  <nav class="navbar navbar-expand-lg navclass ">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Luxury Epoxy NJ</a>
       <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -51,9 +51,9 @@
         <source src="Video Object Remover-1773066275000.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <div class="hero-overlay"><img class="titleimg" src="ChatGPT Image Mar 10, 2026, 11_48_12 AM.png"
+      <div class="hero-overlay" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;"><div style="display: flex; flex-direction: column; align-items: center;"><img class="titleimg" src="ChatGPT Image Mar 10, 2026, 11_48_12 AM.png"
           alt="Title image">
-        <br>
+        <a href="https://outlook.office.com/bookwithme/user/c01322dd9eb54890a802df188e328159%40unishippers.com?anonymous&ismsaljsauthenabled" class="submit-btn btn-fix btn">Book Now</a></div>
         <p class="titletext">Luxury grade epoxy Installation</p>
       </div>
       <div class="hero-content"></div>
@@ -93,7 +93,7 @@
 
     <div class="secondrow">
       
-      <h2 class="subtitle" id="about">About us</h2>
+      <h2 class="subtitle" id="about">Our Values</h2>
 
       <div class="row align-items-center about-item" v-for="member in team" :key="member.name">
         <div class="col-md-6">
@@ -140,12 +140,17 @@
                   <label for="email">Email</label>
                   <input type="email" id="email" class="form-control" placeholder="Enter a valid email" name="user_email" required>
                 </div>
+
+                <div class="form-group mb-3">
+                  <label for="phone">Phone number</label>
+                  <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" name="user_phone" required>
+                </div>
               </div>
             </div>
 
             <div class="col-lg-6 col-12">
               <div class="form-row-right full-height">
-                <div class="form-group">
+                <div class="form-group full-height">
                   <label for="message">Message</label>
                   <textarea id="message" class="form-control" rows="8" placeholder="Enter any questions or details about your project" name="user_message" required></textarea>
                 </div>
@@ -154,23 +159,20 @@
 
           </div> <div class="row mt-4">
             <div class="col-12 text-center">
-              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
             </div>
           </div>
 
         </form>
       </div>
     </div>
-
-        </form>
-      </div>
-    </div>
+   
     <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4 bottom d-flex justify-content-center align-items-center">
+  <footer class="bg-dark text-white py-4 bottom d-flex justify-content-center align-items-center " >
     <p class="mb-0 me-3">&copy; 2026 Luxury Epoxy NJ. All rights reserved.</p> <a href="https://www.instagram.com/luxuryepoxynj_llc/"><img src="174855.png" alt="Logo" class="img-fluid resizedlogo"></a>
   </footer>
 
