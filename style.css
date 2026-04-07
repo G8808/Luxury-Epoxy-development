@@ -49,12 +49,7 @@ section {
  height: var(--heroHeight);
 }
 .titleimg {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);                                       
   height: 450px;
-
 }
 
 .titletext {
@@ -443,4 +438,9 @@ section {
 
 .back-to-top:hover {
   background-color: #0056b3;
+}
+.btn-fix {
+text-align: center;
+width: fit-content;
+font-size: 20px;
 }

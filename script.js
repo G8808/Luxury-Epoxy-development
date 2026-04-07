@@ -25,12 +25,7 @@ createApp({
           image: 'ChatGPT Image Mar 10, 2026, 11_48_12 AM.png',
           alt: 'Commercial Spaces'
         },
-        {
-          name: 'Person 2',
-          description: 'Meet Person 2, our experienced installer with a passion for creating beautiful epoxy flooring solutions.',
-          image: 'ChatGPT Image Mar 10, 2026, 11_48_12 AM.png',
-          alt: 'Residential Spaces'
-        }
+      
       ],
       form: {
         name: '',
