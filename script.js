@@ -6,14 +6,17 @@ createApp({
     return {
       services: [
         {
+          img: 'NewProject.png',
           title: 'Garage Flooring',
           description: 'Transform your garage with our premium Epoxy flooring solutions and professional installation. Our durable coatings protect against stains, cracks, and heavy traffic, making it ideal for everyday use and vehicle storage. Experience a showroom-quality finish with a modern appearance that enhances your entire garage space.'
         },
         {
+          img: 'NewProject1.png',
           title: 'Basements',
           description: 'Enhance your basement with our durable and attractive epoxy flooring options built with premium quality materials. Create a moisture-resistant surface that transforms your space into a functional room perfect for recreation or storage. Our expert team ensures a perfect finish every time, with solutions designed to withstand humidity and temperature fluctuations.'
         },
         {
+          img: 'NewProject2.png',
           title: 'Countertops',
           description: 'Create stunning countertops with our custom epoxy solutions that are both beautiful and incredibly durable. Choose from premium finishes and unique designs that enhance any kitchen or bathroom design. Our countertops resist heat, stains, and scratches while providing lasting elegance and easy maintenance for years to come.'
         }
