@@ -34,7 +34,7 @@
             <a class="nav-link" id="services-link" href="#">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="about-link" href="#">About </a>
+            <a class="nav-link" id="about-link" href="#">Our Values </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="contact-link" href="#">Contact</a>
@@ -78,9 +78,10 @@
   <main id="app" class="container-fluid mt-5 mb-0 ">
       <div class="row section1">
     <h2 class="subtitle" id="services">Our Services</h2>
-    
+  
       <div class="col-md-4" v-for="service in services" :key="service.title">
       <div class="card">
+        <img :src="service.img" :alt="service.title" class="card-img-top" />
         <div class="card-body">
         <h5 class="card-title ">{{ service.title }}</h5>
         <p class="card-text">{{ service.description }}</p>
