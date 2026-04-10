@@ -104,10 +104,11 @@ margin-bottom: 500px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .titletext {
     font-size: clamp(0.8rem, 3vw, 1.5rem);
     padding: 0 0.75rem;
+    margin-right: 130px;
   }
 }
 
@@ -261,7 +262,7 @@ margin-bottom: 500px;
       text-transform: uppercase;
       letter-spacing: 1px;
       line-height: 1.1;
-      color: whitesmoke;
+      color:whitesmoke;
       text-align: center;
       margin: 80px auto 0;
       padding-bottom: 40px;
@@ -523,8 +524,8 @@ margin-bottom: 500px;
 }
 .resizing1 {
   width: 100%;
-  max-width: 800px;
-  height: auto;
+  max-width: 1500px;
+  height: 900px;
   display: block;
   float: right;
   margin: 0 0 20px 20px;
