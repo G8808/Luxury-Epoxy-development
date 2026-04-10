@@ -23,10 +23,22 @@ createApp({
       ],
       team: [
         {
-          name: 'Person 1',
-          description: 'Meet Person 1, our lead technician with over 10 years of experience in epoxy flooring installation.',
-          image: 'ChatGPT Image Mar 10, 2026, 11_48_12 AM.png',
-          alt: 'Commercial Spaces'
+          name: 'About us',
+          description: 'Luxury Epoxy NJ delivers high-quality epoxy flooring with speed, precision, and professionalism. We proudly service all of New Jersey, along with parts of Pennsylvania and New York.',
+          
+          alt: 'About us'
+        },
+          {
+          name: 'What We Do',
+          description: 'We handle both residential and commercial projects, including:',
+          
+          alt: 'About us'
+        },
+        {
+          name: 'Why choose us',
+          description: 'Choose Luxury Epoxy NJ for expert installation, premium materials, and service built for every project.',
+          
+          alt: 'Why choose us'
         },
       
       ],

@@ -74,10 +74,28 @@ section {
   animation: slideUpFade 2s ease-out forwards;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 568px) {
   .titletext {
-    font-size: clamp(1rem, 3.5vw, 2rem);
+margin-left: 480px;
+margin-bottom: 500px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
+
+  .titletext {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    font-size: clamp(1rem, 3.5vw, 2rem);
+    white-space: normal;
+    margin-top: 1rem;
+    max-width: 90vw;
+    width: 100%;
+    text-align: center;
+  }
+
   .about-image {
     display: block;
     margin: 0 auto;
@@ -89,6 +107,7 @@ section {
 @media (max-width: 480px) {
   .titletext {
     font-size: clamp(0.8rem, 3vw, 1.5rem);
+    padding: 0 0.75rem;
   }
 }
 
@@ -185,6 +204,18 @@ section {
   background-size: cover;
   
 }
+.secondrow.row {
+  align-items: center;
+}
+.secondrow > .col-md-6.py-5 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.secondrow > .col-md-6.py-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .section1 .row,
 .secondrow .row,
 .section2 .contact-section {
@@ -192,6 +223,33 @@ section {
   margin: 0 auto;
 
   width: 100%;
+}
+
+.section1 .row > .col-md-4 {
+  padding: 0 0.75rem 1.5rem;
+  display: flex;
+}
+
+.section1 .row > .col-md-4 .card {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.section1 .row > .col-md-4 .card-body,
+.secondrow .about-item .col-12 .card-body {
+  flex: 1;
+}
+
+.secondrow .about-item .col-12 {
+  display: flex;
+}
+
+.secondrow .about-item .col-12 .card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .subtitle {
@@ -206,7 +264,7 @@ section {
       color: whitesmoke;
       text-align: center;
       margin: 80px auto 0;
-      padding-bottom: 80px;
+      padding-bottom: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -222,9 +280,28 @@ section {
   text-align: center;
 }
 
+.what-we-do-list {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+
+.what-we-do-list li {
+  min-height: 1.3rem;
+  list-style-position: inside;
+}
+
 .about-item {
   margin-bottom: 40px;
 }
+
+.secondrow .about-item .row > .col-12 {
+  margin-bottom: 1.5rem;
+}
+
+.secondrow .about-item .card {
+  padding: 1rem;
+}
+
 .about-image {
   width: 100%;
   max-width: 250px;
@@ -440,7 +517,33 @@ section {
   background-color: #0056b3;
 }
 .btn-fix {
-text-align: center;
-width: fit-content;
-font-size: 20px;
+  text-align: center;
+  width: fit-content;
+  font-size: 20px;
+}
+.resizing1 {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  float: right;
+  margin: 0 0 20px 20px;
+  padding-right: 150px;
+}
+
+@media (max-width: 68px) {
+  .resizing1 {
+    float: none;
+    margin: 20px auto 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.fix2 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+ul {
+  list-style-type: "-";
 }

@@ -28,13 +28,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link selected" aria-current="page"  href="#">Home</a>
+            <a class="nav-link selected" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="services-link" href="#">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="about-link" href="#">Our Values </a>
+            <a class="nav-link" id="about-link" href="#">About us </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="contact-link" href="#">Contact</a>
@@ -51,12 +51,15 @@
         <source src="Video Object Remover-1773066275000.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <div class="hero-overlay" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;"><div style="display: flex; flex-direction: column; align-items: center;"><img class="titleimg" src="ChatGPT Image Mar 10, 2026, 11_48_12 AM.png"
-          alt="Title image">
-        <a href="https://outlook.office.com/bookwithme/user/c01322dd9eb54890a802df188e328159%40unishippers.com?anonymous&ismsaljsauthenabled" class="submit-btn btn-fix btn">Book Now</a></div>
+      <div class="hero-overlay"
+        style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center;"><img class="titleimg"
+            src="ChatGPT Image Mar 10, 2026, 11_48_12 AM.png" alt="Title image">
+          <a href="https://outlook.office.com/bookwithme/user/c01322dd9eb54890a802df188e328159%40unishippers.com?anonymous&ismsaljsauthenabled"
+            class="submit-btn btn-fix btn">Book Now</a>
+        </div>
         <p class="titletext">Luxury grade epoxy Installation</p>
       </div>
-      <div class="hero-content"></div>
     </div>
   </section>
 
@@ -76,105 +79,124 @@
   </div>
 
   <main id="app" class="container-fluid mt-5 mb-0 ">
-      <div class="row section1">
-    <h2 class="subtitle" id="services">Our Services</h2>
-  
+    <div class="row section1">
+      <h2 class="subtitle" id="services">Our Services</h2>
+
       <div class="col-md-4" v-for="service in services" :key="service.title">
-      <div class="card">
-        <img :src="service.img" :alt="service.title" class="card-img-top" />
-        <div class="card-body">
-        <h5 class="card-title ">{{ service.title }}</h5>
-        <p class="card-text">{{ service.description }}</p>
+        <br>
+        <div class="card fix2">
+          <img :src="service.img" :alt="service.title" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title ">{{ service.title }}</h5>
+            <p class="card-text">{{ service.description }}</p>
+          </div>
         </div>
-      </div>
       </div>
     </div>
 
 
 
-    <div class="secondrow">
-      
-      <h2 class="subtitle" id="about">Our Values</h2>
-
-      <div class="row align-items-center about-item" v-for="member in team" :key="member.name">
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">{{ member.name }}</h5>
-              <p class="card-text">{{ member.description }}</p>
+    <div class="secondrow row">
+      <h2 class="subtitle col-12" id="about">About us</h2>
+      <div class="col-md-6  about-item">
+        <div class="row">
+          <div class="col-12" v-for="member in team" :key="member.name">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ member.name }}</h5>
+                <p class="card-text">{{ member.description }}</p>
+                <ul v-if="member.name === 'What We Do'" class="what-we-do-list">
+                  <li>Garages & basements</li>
+                  <li>Warehouses & industrial spaces</li>
+                  <li>Retail stores & showrooms</li>
+                </ul>
+                <ul v-if="member.name === 'Why choose us'" class="what-we-do-list">
+                  <li>Fast & Efficient – We get the job done right, on time</li>
+                  <li>Professional – Clear communication, clean execution</li>
+                  <li>Built to Last – Premium materials, proven systems</li>
+                  <li>Scalable – From small garages to large commercial jobs</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <img :src="member.image" :alt="member.alt" class="about-image" />
-        </div>
       </div>
-
+      <div class="col-md-6 py-5">
+        <img src="IMG_20260410_094712.jpg" alt="About us" class="resizing1">
+      </div>
     </div>
     <div class="section2">
-<h2 class="subtitle" id="contact">Interested in our services? </h2>
-<div class="contact-section">
-    <h2>Contact us</h2>
-    
-    <div class="form-container">
-        <form action="https://formspree.io/f/xpqyvgjo" method="POST">
-          <div class="row gx-3">
-            
-            <div class="col-lg-6 col-12">
-              <div class="form-row-left">
-                <div class="form-group mb-3">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" class="form-control" placeholder="Enter your name" name="user_name" required>
-                </div>
+      <h2 class="subtitle" id="contact">Interested in our services? </h2>
+      <div class="contact-section">
+        <h2>Contact us</h2>
 
-                <div class="form-group mb-3">
-                  <label for="service">Service of Interest</label>
-                  <select id="service" class="form-control" name="service" required>
-                    <option value="">Select a service</option>
-                    <option value="garage-flooring">Garage Flooring</option>
-                    <option value="basements">Basements</option>
-                    <option value="countertops">Countertops</option>
-                  </select>
-                </div>
+        <div class="form-container">
+          <form action="https://formspree.io/f/xpqyvgjo" method="POST">
+            <div class="row gx-3">
 
-                <div class="form-group mb-3">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" class="form-control" placeholder="Enter a valid email" name="user_email" required>
-                </div>
+              <div class="col-lg-6 col-12">
+                <div class="form-row-left">
+                  <div class="form-group mb-3">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name" name="user_name"
+                      required>
+                  </div>
 
-                <div class="form-group mb-3">
-                  <label for="phone">Phone number</label>
-                  <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" name="user_phone" required>
+                  <div class="form-group mb-3">
+                    <label for="service">Service of Interest</label>
+                    <select id="service" class="form-control" name="service" required>
+                      <option value="">Select a service</option>
+                      <option value="garage-flooring">Garage Flooring</option>
+                      <option value="basements">Basements</option>
+                      <option value="countertops">Countertops</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter a valid email"
+                      name="user_email" required>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number"
+                      name="user_phone" required>
+                  </div>
                 </div>
+              </div>
+
+              <div class="col-lg-6 col-12">
+                <div class="form-row-right full-height">
+                  <div class="form-group full-height">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" rows="8"
+                      placeholder="Enter any questions or details about your project" name="user_message"
+                      required></textarea>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row mt-4">
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
               </div>
             </div>
 
-            <div class="col-lg-6 col-12">
-              <div class="form-row-right full-height">
-                <div class="form-group full-height">
-                  <label for="message">Message</label>
-                  <textarea id="message" class="form-control" rows="8" placeholder="Enter any questions or details about your project" name="user_message" required></textarea>
-                </div>
-              </div>
-            </div>
-
-          </div> <div class="row mt-4">
-            <div class="col-12 text-center">
-              <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
-            </div>
-          </div>
-
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
-   
-    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+      <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4 bottom d-flex justify-content-center align-items-center " >
-    <p class="mb-0 me-3">&copy; 2026 Luxury Epoxy NJ. All rights reserved.</p> <a href="https://www.instagram.com/luxuryepoxynj_llc/"><img src="174855.png" alt="Logo" class="img-fluid resizedlogo"></a>
+  <footer class="bg-dark text-white py-4 bottom d-flex justify-content-center align-items-center ">
+    <p class="mb-0 me-3">&copy; 2026 Luxury Epoxy NJ. All rights reserved.</p> <a
+      href="https://www.instagram.com/luxuryepoxynj_llc/"><img src="174855.png" alt="Logo"
+        class="img-fluid resizedlogo"></a>
   </footer>
 
   <!-- Bootstrap JS Bundle (includes Popper) -->
