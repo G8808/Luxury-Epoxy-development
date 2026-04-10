@@ -74,10 +74,28 @@ section {
   animation: slideUpFade 2s ease-out forwards;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 568px) {
   .titletext {
-    font-size: clamp(1rem, 3.5vw, 2rem);
+margin-left: 480px;
+margin-bottom: 500px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
+
+  .titletext {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    font-size: clamp(1rem, 3.5vw, 2rem);
+    white-space: normal;
+    margin-top: 1rem;
+    max-width: 90vw;
+    width: 100%;
+    text-align: center;
+  }
+
   .about-image {
     display: block;
     margin: 0 auto;
@@ -89,6 +107,7 @@ section {
 @media (max-width: 480px) {
   .titletext {
     font-size: clamp(0.8rem, 3vw, 1.5rem);
+    padding: 0 0.75rem;
   }
 }
 
