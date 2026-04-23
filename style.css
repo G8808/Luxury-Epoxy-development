@@ -238,6 +238,12 @@ margin-bottom: 500px;
   flex: 1;
 }
 
+.section1 .card-img-top {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
 .section1 .row > .col-md-4 .card-body,
 .secondrow .about-item .col-12 .card-body {
   flex: 1;
